@@ -1,0 +1,69 @@
+---
+layout:   post
+title:    sem4r hello world!
+---
+
+To install sem4r, you need "Ruby":ruby and know how ruby gem works.
+If you are reading this probabily you know it already. Anyway in the sidebar
+there are links to learn more about Ruby.
+
+To install sem4r, you can type:
+
+{% highlight ruby %}
+gem install sem4r
+{% endhighlight %}
+
+To access adwords sandbox you need:
+  * gmail account  (i.e. _myaccount_ @gmail.com)
+  * password (your gmail password)
+  * developer token (i.e. _myaccount_ @gmail.com++EUR)
+
+To connect sem4r to sandbox environment:
+
+{% highlight ruby %}
+require 'rubygems'
+require 'sem4r'
+include Sem4r
+
+adwords = Adwords.sandbox(
+  :email => "<myaccount>@gmail.com",
+  :password => "secret",
+  :developer_token => "<myaccount>@gmail.com++EUR")
+{% endhighlight %}
+
+You can list all client accounts:
+
+{% highlight ruby %}
+adwords.account.p_client_accounts
+{% endhighlight %}
+
+Putting all together:
+
+{% highlight ruby linenos %}
+require 'rubygems'
+require 'sem4r'
+include Sem4r
+
+adwords = Adwords.sandbox(
+  :email => "<myaccount>@gmail.com",
+  :password => "secret",
+  :developer_token => "<myaccount>@gmail.com++EUR")
+adwords.account.p_client_accounts
+{% endhighlight %}
+
+The output look like this[1]:
+
+{% highlight irb %}
+myaccount@gmail.com - client_1+myaccount@gmail.com
+myaccount@gmail.com - client_2+myaccount@gmail.com
+myaccount@gmail.com - client_3+myaccount@gmail.com
+myaccount@gmail.com - client_4+myaccount@gmail.com
+myaccount@gmail.com - client_5+myaccount@gmail.com
+{% endhighlight %}
+
+You can find the code on "github":github
+
+fn1. the real accout name was replaced with _myaccount_
+
+[ruby]http://www.ruby-lang.org/en/
+[github]http://github.com/sem4r/sem4r/blob/master/examples/blogs/2009-11-29-hello_world.rb

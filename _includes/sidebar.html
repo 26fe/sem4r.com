@@ -1,0 +1,47 @@
+{% if page.permalink != '/about/' %}
+  <div class="widget">
+    <h4><a href="/about/">About</a></h4>
+    <p>
+      To learn more on this blog, read "<a href="/01-why-sem4r/">why sem4r</a>" post.<br/>
+      Thank you for your interest.
+    </p>
+  </div>
+{% endif %}
+
+{% if page.title %}
+  <div class="widget">
+    <h4>Recent Entries</h4>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<div class="widget">
+  <h4>Sem4r links</h4>
+    <ul>
+      <li><a href="http://gemcutter.org/gems/sem4r">sem4r on gemcutter</a></li>
+      <li><a href="http://github.com/sem4r/sem4r">sem4r on github</a></li>
+      <li><a href="http://twitter.com/sem4r_">sem4r on twitter</a></li>
+      <li><a href="http://www.ohloh.net/p/sem4r">sem4r on ohloh</a></li>
+  </ul>
+</div>
+
+<div class="widget">
+  <h4>Adwords links</h4>
+    <ul>
+      <li><a href="http://code.google.com/apis/adwords/">Adwords Api Documentation</a></li>
+      <li><a href="http://adwordsapi.blogspot.com/">Adwords Api Blog</a></li>
+      <li><a href="http://code.google.com/p/google-api-adwords-ruby/">adwords4r library</a></li>
+  </ul>
+</div>
+
+<div class="widget">
+  <h4>Ruby links</h4>
+    <ul>
+      <li><a href="http://www.ruby-lang.org/en/">Ruby language</a></li>
+      <li><a href="http://rubyinstaller.org/">Ruby windows installer</a></li>
+  </ul>
+</div>

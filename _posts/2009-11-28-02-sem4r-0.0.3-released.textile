@@ -1,0 +1,8 @@
+--- 
+layout:   post
+title:    Sem4r version 0.0.3 released
+---
+
+Released version 0.0.3 on "gemcutter":gemcutter. Added spec some tests and more examples.
+
+[gemcutter]http://gemcutter.org/gems/sem4r

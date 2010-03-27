@@ -1,0 +1,66 @@
+//
+// Header
+// it is ok to have fixed font size!
+
+#header
+  height: 135px
+  background-image: url(/img/header.png)
+  background-repeat: no-repeat
+  position: relative
+  overflow: hidden
+
+  h1 a
+    color: #ffffff
+    position: absolute
+    bottom: 40px
+    left: 80px
+    display: block
+    font-size: 50px
+    font-weight: normal
+    letter-spacing: -0.08em
+    text-decoration: none
+    font-family: Arial,sans-serif
+    text-align: left
+  h2
+    color: #BF7F30
+    position: absolute
+    left: 240px
+    bottom: 46px
+    text-align: left
+    font-family: Monaco, "Lucida Console",  monospace
+    font-size: 20px
+    line-height: 16px
+    margin: 0px
+    padding: 0px
+
+
+  .subscribe
+    position: absolute
+    right: 50px
+    bottom: 20px
+    width: 75px
+    height: 11px
+    background-image: url(/img/subscribe.png)
+    display: block
+    text-indent: -9999px
+
+  .nav
+    position: absolute
+    bottom: 0px
+    left: 580px
+    font-size: 12px
+    li
+      float: left
+      text-transform: uppercase
+      position: relative
+      list-style: none
+    a
+      color: #71f2fe
+      padding: 5px 10px
+      text-decoration: none
+      cursor: default
+    &:link, &:visited
+      cursor: pointer
+    &.active, &:active, &:link:hover, &:visited:hover
+      color: #a7ff84 !important
+

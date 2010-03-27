@@ -1,0 +1,14 @@
+---
+layout:   post
+title:    Sem4r version 0.0.6 released
+---
+
+Released version 0.0.6 on "gemcutter":gemcutter.
+
+* added lot of test, according to "caliper":caliper code:test ratio is 0.5. Low
+  but it is improving.
+* added initial support for "BulkMutateJob":bulkmutatejob.
+
+[caliper]http://getcaliper.com/caliper/project?repo=http%3A%2F%2Fgemcutter.org%2Fgems%2Fsem4r
+[bulkmutatejob]http://docs.google.com/present/view?id=dfn855gb_0dvrc5nch
+[gemcutter]http://gemcutter.org/gems/sem4r

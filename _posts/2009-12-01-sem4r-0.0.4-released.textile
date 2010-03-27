@@ -1,0 +1,11 @@
+--- 
+layout:   post
+title:    Sem4r version 0.0.4 released
+---
+
+Released version 0.0.4 on "gemcutter":gemcutter.
+
+Fixed some bug on ruby 1.8. Now it works on ruby 1.8, 1.9 under windows
+and linux.
+
+[gemcutter]http://gemcutter.org/gems/sem4r

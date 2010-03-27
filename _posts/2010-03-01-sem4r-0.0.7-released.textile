@@ -1,0 +1,15 @@
+---
+layout:   post
+title:    Sem4r version 0.0.7 released
+---
+
+Released version 0.0.7 on "gemcutter":gemcutter.
+
+* added simple command line interface. With this command interfase it is possible to
+  list clients, reports, keywords, etc on the adwords accounts.
+* added support for "AdGroup Bids":adgroupbids and "AdGroup Criterion Bids":criterionbids,
+  without them this library is useless!
+
+[adgroupbids]http://code.google.com/intl/it/apis/adwords/v2009/docs/reference/AdGroupService.AdGroupBids.html
+[criterionbids]http://code.google.com/intl/it/apis/adwords/v2009/docs/reference/AdGroupCriterionService.AdGroupCriterionBids.html
+[gemcutter]http://gemcutter.org/gems/sem4r

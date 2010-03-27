@@ -1,0 +1,132 @@
+---
+layout:   post
+title:    Using Ad Parameters
+---
+
+In the site of "v2009 Hack Day":hackday there is a "presentation":presentation
+about using ad parameters.
+
+The ad parameters "allows you to change ad parameter text without having
+to modify or create a new ad"[1]. I use the same example of presentation.
+
+We can refence parameters in text ad simple adding it between "{}":
+
+{% highlight ruby %}
+
+text_ad do
+  headline      "Save on Rossignol skis"
+  description1  "Great deal on Rissignol starting at"
+  description2  "{param1:lowprices}! Save {param2:big time}!"
+  url           "http://skideals.com"
+  display_url   "www.SkiDeals.com"
+end
+
+{% endhighlight %}
+
+We can associate parameter to a keyword in this way:
+
+{% highlight ruby %}
+keyword do
+  text       "ski deal rossignol"
+  match      "BROAD"
+
+  ad_param do
+    index 1
+    text  "$279"
+  end
+
+  ad_param do
+    index 2
+    text  "20%"
+  end
+end
+{% endhighlight %}
+
+So to create an adgroup with parameters:
+
+{% highlight ruby %}
+adgroup do
+  name "Skis for sales"
+
+  text_ad do
+    headline      "Save on Rossignol skis"
+    description1  "Great deal on Rissignol starting at"
+    description2  "{param1:lowprices}! Save {param2:big time}!"
+    url           "http://skideals.com"
+    display_url   "www.SkiDeals.com"
+  end
+
+  keyword do
+    text       "ski deal rossignol"
+    match      "BROAD"
+
+    ad_param do
+      index 1
+      text  "$279"
+    end
+
+    ad_param do
+      index 2
+      text  "20%"
+    end
+  end
+end
+{% endhighlight %}
+
+Putting all together:
+
+{% highlight ruby linenos %}
+require 'rubygems'
+require 'sem4r'
+include Sem4r
+
+adwords = Adwords.sandbox(
+  :email => "<myaccount>@gmail.com",
+  :password => "secret",
+  :developer_token => "<myaccount>@gmail.com++EUR")
+
+client_account = adwords.account.client_accounts.first
+
+campaign = client_account.campaign do
+  name "Skis"
+
+  adgroup do
+    name "Skis for sales"
+
+    text_ad do
+      headline      "Save on Rossignol skis"
+      description1  "Great deal on Rissignol starting at"
+      description2  "{param1:lowprices}! Save {param2:big time}!"
+      url           "http://skideals.com"
+      display_url   "www.SkiDeals.com"
+    end
+
+    keyword do
+      text       "ski deal rossignol"
+      match      "BROAD"
+
+      ad_param do
+        index 1
+        text  "$279"
+      end
+
+      ad_param do
+        index 2
+        text  "20%"
+      end
+    end
+  end
+end
+
+campaign.adgroups(true).each do |adgroup|
+  adgroup.p_ad_params
+end
+{% endhighlight %}
+
+You can find the example code (eventually updated) on "github":github
+
+fn1. "presentation":presentation
+
+[hackday]http://sites.google.com/site/v2009hackdays/
+[presentation]http://docs.google.com/present/view?id=ddbpq32p_2577btdbch
+[github]http://github.com/sem4r/sem4r/blob/master/examples_blog/2010-02-07-ad-parameters.rb

@@ -1,0 +1,45 @@
+---
+layout:   post
+title:    Constants scope are different from Ruby 1.8.7 and Ruby 1.9.1
+---
+
+The following code works with ruby 1.9.1 but doesn't work with ruby 1.8.7:
+
+{% highlight ruby %}
+class A
+ C = "c"
+end
+
+A.new.instance_eval do
+ puts C
+end
+{% endhighlight %}
+
+If you try to execute the previous code with ruby 1.8.7, you will obtain:
+
+{% highlight irb %}
+2010-02-06-constants-scope.rb:7: uninitialized constant C (NameError)
+	from 2010-02-06-constants-scope.rb:6:in `instance_eval'
+	from 2010-02-06-constants-scope.rb:6
+{% endhighlight %}
+
+C is not recognized as constant in 1.8.7. Ruby 1.8.7 try to resolve C is in
+Object class, and doesn't found it.
+Ruby 1.9.1 try to resolve C in the A class so doesn't fail!
+
+Sem4r use heavily symbols. For example to specify the match type in keyword:
+
+{% highlight ruby %}
+keyword do
+   match_type BROAD
+end
+{% endhighlight %}
+
+The previous code work in ruby 1.9.1. In ruby 1.8.7 you must use:
+
+{% highlight ruby %}
+keyword do
+   match_type "BROAD"
+end
+{% endhighlight %}
+

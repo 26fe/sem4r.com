@@ -1,0 +1,54 @@
+--- 
+layout:   post
+title:    Why sem4r
+---
+
+Sem4r is an adwords client library. The "Google AdWords Api":adwords_api
+is a webservice soap protocol. From the official site:
+
+bq. The Google AdWords API lets developers build applications that interact directly
+with the AdWords platform. With these applications, advertisers and third
+parties can more efficiently and creatively manage their large or complex
+AdWords accounts and campaigns.
+
+I used for some time adwords api for my job in PHP and sometime in Java.
+Further I like to experiment in my spare time new languages, and
+I found the wonderful Ruby language.
+
+I have tryed the "adwords4r":adwords4r, the official library by Google.
+And I don't like it. In my opinion is not "rubyish":rubyish and reveals
+to much of the underlying lower level api.
+
+At the best of my knowledge, the official adwords4r library
+doesn't work with Ruby 1.9, because it uses "soap4r":soap4r.
+The soap4r library is not supported by ruby 1.9.
+
+The library objectives are:
+
+* works with ruby 1.8 and 1.9
+* works under linux and windows
+* reduces external dependencies (soap4r,...)
+* implements a consistent model to hide the low level api call
+* be rubyish :-)
+
+My personal objectives are:
+
+* Finding spare time to dedicate to this project
+  (it is the hard thing, and i am not sure to achieve it)
+* Learning more about Ruby
+* Learning Ruby metaprogramming techniques[1]
+* Writing an (useful) library into a niche so I can write at my
+  own pace without to many competitors :-P. I don't have a lot of time, so I use my spare time.
+* Use English (I'm to lazy to learn it so I force myself to use it writing documentation)
+* Learning to manage a little open source project.
+  (Write test, write documentation, and so on).
+
+
+fn1. I have bought the wonderful book "Metaprogramming Ruby":metabook published
+by "The Pragmatic Programmer"
+
+[adwords4r]http://code.google.com/p/google-api-adwords-ruby/
+[adwords_api]http://code.google.com/apis/adwords/
+[metabook]http://www.pragprog.com/titles/ppmetr/metaprogramming-ruby
+[rubyish]http://groups.google.com/group/ruby-talk-google/browse_thread/thread/33c63f8ee59509c8/93347838cd2deb7d
+[soap4r]http://dev.ctor.org/soap4r

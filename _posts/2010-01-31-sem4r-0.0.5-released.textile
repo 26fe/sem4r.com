@@ -1,0 +1,12 @@
+---
+layout:   post
+title:    Sem4r version 0.0.5 released
+---
+
+Released version 0.0.5 on "gemcutter":gemcutter.
+
+* Removed application token, see post on official "Adwords Api Blog":apiblog
+* Fixed bug on Account#targeting_idea method.
+
+[gemcutter]http://gemcutter.org/gems/sem4r/versions/0.0.5
+[apiblog]http://adwordsapi.blogspot.com/2010/01/application-token-no-longer-required-to.html

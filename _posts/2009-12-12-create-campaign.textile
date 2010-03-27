@@ -1,0 +1,69 @@
+---
+layout:   post
+title:    Create a new campaign
+---
+
+The idea underline sem4r is to have the code readible as much as possible.
+The code for the creation of campaign looks like more natural[1]
+than a bunch of arrays and hashes.
+
+Account exposes the method <code>create_campaign</code> than take a block.
+The block specifies the campaign name, and the adgroups contained into the campaign.
+The adgroup take a block that specified the criterion contained into the adgroup.
+
+{% highlight ruby %}
+campaign = account.create_campaign do
+  name "new campaign #{Time.now}"
+  adgroup do
+    name "new adgroup #{Time.now}"
+    keyword do
+      text       "keyword"
+      match      "BROAD"
+    end
+    placement do
+      url "www.example.com"
+    end
+  end
+end
+{% endhighlight %}
+
+The criterion can be keyword or placement.
+
+Putting all together:
+
+{% highlight ruby linenos %}
+require 'rubygems'
+require 'sem4r'
+include Sem4r
+
+adwords = Adwords.sandbox(
+  :email => "<myaccount>@gmail.com",
+  :password => "secret",
+  :developer_token => "<myaccount>@gmail.com++EUR")
+
+account = adwords.account.client_accounts
+
+campaign = account.create_campaign do
+  name "new campaign #{Time.now}"
+
+  adgroup do
+    name "new adgroup #{Time.now}"
+    keyword do
+      text       "keyword"
+      match      "BROAD"
+    end
+    placement do
+      url "www.example.com"
+    end
+  end
+end
+
+campaign.p_adgroups(true)
+{% endhighlight %}
+
+You can find the example code (eventually updated) on "github":github
+
+fn1. IMHO
+
+[github]http://github.com/sem4r/sem4r/blob/master/examples/blogs/2009-12-12-create-campaign.rb
+

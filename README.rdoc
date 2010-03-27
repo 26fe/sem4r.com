@@ -1,0 +1,7 @@
+License
+=======
+
+The contents of the direcotry _post/ is copyright © Sem4r:
+Everything else is MIT Licensed.
+
+
