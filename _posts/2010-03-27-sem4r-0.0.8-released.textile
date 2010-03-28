@@ -5,6 +5,7 @@ title:    Sem4r version 0.0.8 released
 
 Released version 0.0.8 on "gemcutter":gemcutter.
 
+* "changelog":changelog on github
 * improved profiles management i.e. a set of adwords configuration
 * improved command line interface. Now it is simple add new commands.
 * improved support for "TargetingIdeaService":targeting see this "example on github":example
@@ -12,3 +13,4 @@ Released version 0.0.8 on "gemcutter":gemcutter.
 [targeting]http://code.google.com/intl/it/apis/adwords/v2009/docs/reference/TargetingIdeaService.html
 [example]http://github.com/sem4r/sem4r/blob/master/examples_sem4r/09_targeting_idea.rb
 [gemcutter]http://gemcutter.org/gems/sem4r
+[changelog]http://github.com/sem4r/sem4r/compare/v0.0.7...v0.0.8
