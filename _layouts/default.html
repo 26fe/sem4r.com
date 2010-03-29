@@ -13,6 +13,7 @@
     <!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
 
     <link rel="stylesheet" href="/css/blueprint-0.9.1/plugins/fancy-type/screen.css" type="text/css" media="screen, projection" />
+
     <link rel="stylesheet" href="/css/sem4r.css" type="text/css"/>
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen, projection"/>
     <script src="http://www.google.com/jsapi" type="text/javascript" charset="utf-8"></script>
@@ -24,36 +25,10 @@
   </head>
   <body>
     <div class="container">
-
-      <div id="header" class="span-24 last">
-        <h1><a href="/">Sem4r</a></h1>
-        <h2>{{ site.comment }}</h2>
-        <ul class="nav">
-          {% for item in site.nav %}
-          <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-          {% endfor %}
-        </ul>
-        <a href="{{ site.feed }}" class="subscribe">Subscribe</a>
-      </div>
-
-      <div id="contents" class="span-18 colborder" >
-        {{ content }}
-      </div>
-
-      <div id="sidebar" class="span-5 last">
-        {% if page.sidebar != false %}
-        {% include sidebar.html %}
-        {% endif %}
-      </div>
-
-      <div id="footer" class="span-24 last">
-        <div class="span-11 prepend-1 left">&copy; Copyright 2009-2010, Sem4r.<br/>All Rights Reserved.</div>
-        <div class="span-11 append-1 last right">
-          Theme inspired by <a href="http://www.appden.com">AppDen (Scott Kyle)</a><br/>
-          Powered by <a href='http://github.com/mojombo/jekyll'>Jekyll</a> and
-          <a href="http://www.blueprintcss.org/">blueprintcss</a>
-        </div>
-      </div>
+      <div id="header"   class="span-24 last">{% include _header.html %}</div>
+      <div id="contents" class="span-18 colborder" >{{ content }}</div>
+      <div id="sidebar"  class="span-5  last">{% include _sidebar.html %}</div>
+      <div id="footer"   class="span-24 last">{% include _footer.html %}</div>
     </div>
 
     <script type="text/javascript">

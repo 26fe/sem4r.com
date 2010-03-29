@@ -22,22 +22,20 @@
   <div class="entry-footer">
     <div id="disqus_thread"></div>
     <a class="entry-comments" href="{{ post.url }}#disqus_thread">0</a>
-
     <p>
       Posted by {{ site.author.name }}
       on {{ post.date | date:'%A, %B %d, %Y' | replace:' 0',' ' }}
     </p>
-
-    {% comment %}
     <p>
+      {% unless post.categories == empty %}
       Filed in
       {{ post.categories | array_to_sentence_string | capitalize }}
+      {% endunless %}
       {% unless post.tags == empty %}
         and tagged
         {{ post.tags | array_to_sentence_string }}
       {% endunless %}
     </p>
-    {% endcomment %}
 
   </div>
 </div>
