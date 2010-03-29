@@ -1,0 +1,63 @@
+---
+layout:   post
+title:    Sem4r library profiles
+published: true
+---
+
+The sem4r configuration file contains credentials to connect AdWords through
+the API(Application Programming Interface).
+The credentials are grouped into profiles.
+So you can manage multiple AdWords accounts without having to reconfigure each time
+the library.
+The configuration file is located by default in _$HOME/.sem4r/sem4r.yml_.
+
+To set up two profiles for two clients (client1, client2) and the sandbox,
+_sem4r.yml_ contains the following lines:
+
+{% highlight yaml %}
+# file: sem4r.yml
+client1:
+  email:           client1@gmail.com
+  password:        secret
+  environment:     production
+  developer_token: 1234567890
+
+client2:
+  email:           client2@gmail.com
+  password:        big secret
+  environment:     production
+  developer_token: 0987654321
+
+sandbox:
+  email:           greatdeveloper@gmail.com
+  password:        who care?
+  developer_token: greatdeveloper@gmail.com++EUR
+{% endhighlight %}
+
+Sem is a command line interface for the sem4r library.
+Sem run commands on an AdWords account.
+A sem4r library profile can be selected using -p switch of sem executable.
+
+The following command lists the reports for the profile "client1":
+
+{% highlight bash %}
+$ sem -p client1 reports
+{% endhighlight %}
+
+The list of reports in the sandbox is always the same :-)
+
+{% highlight bash %}
+$ sem -p sandbox reports
+
+11 'report [11]' Pending
+22 'report [22]' InProgress
+33 'report [33]' Completed
+44 'report [44]' Failed
+4 unit spent for 4 operations in 81ms
+{% endhighlight %}
+
+However the default profile is the _sandbox_ so the above command can be written as:
+
+{% highlight bash %}
+$ sem reports
+{% endhighlight %}
