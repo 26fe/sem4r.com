@@ -1,46 +1,20 @@
-==License
+= Sem4r.com site
+
+Sem4r use a lightly modified version of Jekyll to had hard break.
+You can find this version here: http://github.com/sem4r/jekyll
+
+== License
 
 The contents of the direcotry _post/ is copyright © Sem4r:
 Everything else is MIT Licensed.
 
+== To modify jekyl to add 'hard_break' for RedCloth
 
-==Modifiche a jekyl per disattivare gli hard_break di redclot
-
-jekyll-0.5.4/lib/jekyll/site.rb
-
-la funzione textile cambia in:
+Open file: jekyll-0.5.4/lib/jekyll/site.rb,
+change the 'textile' function to:
 
   def textile(content)
     rc = RedCloth.new(content)
     rc.hard_breaks = false
     rc.to_html
   end
-
-
-
-RedCloth-4.2.2/lib/redcloth/formatters/html.rb
-
-la funzione br di redclot diventa (non c'e' ne bisogno):
-
-  def br(opts)
-     puts "oh!"
-     return "\n"
-    if hard_breaks == false
-      "\n"
-    else
-      "<br />\n"
-    end
-  end
-
-== TODO
-
-* usare blueprint
-    <link rel="stylesheet" href="/lib/blueprint-0.9.1/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="/lib/blueprint-0.9.1/print.css" type="text/css" media="print">
-    <!--[if lt IE 8]><link rel="stylesheet" href="/lib/blueprint-0.9.1/ie.css" type="text/css" media="screen, projection"><![endif]-->
-
-* usare sass automatizzare con task rake
-* usare jquery
-* usare CDN (Content Delivery Network) di google per javascript
-* aggiungere task rake per pubblicare su appengine
-
