@@ -8,11 +8,9 @@ h2. About Me
 
 !>{margin-left: 10px;}http://farm3.static.flickr.com/2335/2076242447_4faa114266_m.jpg(My flickr photo)!
 
-(double-space)* Sem4r
-* Born in southern Italy.
-* I studied Computer Science at the University of Pisa a lot of time ago.
-* Now living and working in Rome, Italy.
-* Sometime taking "photos":http://www.giovanniferro.eu around.
+(double-space)* I am living and working in Italy.
+* I like ruby.
+* No much more to tell :-)
 
 h2{padding-top: 20px;}. Site Credits
 
