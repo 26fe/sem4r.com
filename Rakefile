@@ -25,18 +25,18 @@ task :sass do
 end
 
 namespace :deploy do
-  desc "Deploy to Dev"
-  task :dev => :build do
-    rsync "dev.sem4r.com"
-  end
+  # desc "Deploy to Dev"
+  # task :dev => :build do
+  #   rsync "dev.sem4r.com"
+  # end
   
   desc "Deploy to Live"
   task :live => :build do
     rsync "sem4r.com"
   end
   
-  desc "Deploy to Dev and Live"
-  task :all => [:dev, :live]
+  # desc "Deploy to Dev and Live"
+  # task :all => [:dev, :live]
   
   def rsync(domain)
     sh "rsync -rtz --delete _site/ sem4r@sem4r.com:~/#{domain}/"
