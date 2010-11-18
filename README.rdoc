@@ -1,11 +1,10 @@
 = Sem4r.com site
 
 Sem4r use a lightly modified version of Jekyll to had hard break.
-You can find this version here: http://github.com/sem4r/jekyll
 
 == License
 
-The contents of the direcotry _post/ is copyright © Sem4r:
+The contents of the directory _post/ is copyright © Sem4r:
 Everything else is MIT Licensed.
 
 == To modify jekyl to add 'hard_break' for RedCloth
