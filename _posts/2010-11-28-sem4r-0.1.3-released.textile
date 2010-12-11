@@ -1,0 +1,23 @@
+---
+layout:   post
+title:    Sem4r version 0.1.3 released
+---
+
+Released version 0.1.3 on "gemcutter":gemcutter.
+Probably this is the last version for 2010. I hope that that 2011 will be a better year: more releases!!
+
+* ruby 1.9.2-p0: all spec passed and also all examples are working again!
+* jruby 1.5.5: sometime jruby exit with jvm memory error.
+* two commands at sem command line executable was be added:
+   - jobs to manage the bulk mutate jobs
+   - repdef to manage the report definition entities
+* also a new 'profile' command was introduced to manage profile.
+* the passwords must not be stored into profile configuration file. It could be typed on terminal.
+* httpclient is used to overcome some errors with net::http standard library client.
+  during google adwords report download.
+
+You can see the "datails changelog on github":changelog.
+
+[gemcutter]http://gemcutter.org/gems/sem4r
+[changelog]https://github.com/sem4r/sem4r/compare/v0.1.2...v0.1.3
+[httpclient]http://rubygems.org/gems/httpclient

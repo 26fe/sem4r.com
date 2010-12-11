@@ -7,7 +7,7 @@ Released version 0.0.8 on "gemcutter":gemcutter.
 
 * "changelog":changelog on github
 * improved profiles management i.e. a set of adwords configuration
-* improved command line interface. Now it is simple add new commands.
+* improved command line interface. Now it is simple to add new commands.
 * improved support for "TargetingIdeaService":targeting see this "example on github":example
 
 [targeting]http://code.google.com/intl/it/apis/adwords/v2009/docs/reference/TargetingIdeaService.html

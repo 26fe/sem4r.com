@@ -1,0 +1,14 @@
+---
+layout:   post
+title:    Sem4r version 0.1.2 released
+---
+
+Released version 0.1.2 on "gemcutter":gemcutter.
+
+* merged other forks on github, mainly "TargetingIdeaService":targeting improvement
+* preliminary support to "report definition service":repdef
+* moving from 201003 to 201008 adwords api version namespace
+
+[gemcutter]http://gemcutter.org/gems/sem4r
+[targeting]http://code.google.com/intl/it/apis/adwords/docs/reference/latest/TargetingIdeaService.html
+[repdef]http://code.google.com/intl/it/apis/adwords/docs/reference/latest/ReportDefinitionService.html
